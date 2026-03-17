@@ -1,0 +1,57 @@
+{
+  "_comment": "APK Lifecycle Manager — config.json.example",
+  "_version": "1.0",
+  "_last_updated": "2026-03-17",
+  "_app_count": 3,
+
+  "paths": {
+    "watch_dir": "/volume1/homes/DEVICENAME/backups/apps",
+    "archive_dir": "/volume1/Software/Android"
+  },
+
+  "global_defaults": {
+    "archive_after_days": 60,
+    "archive_action": "move",
+    "delete_after_days": 365,
+    "maintain_folder_structure": true
+  },
+
+  "apps": [
+    {
+      "id": 1,
+      "manufacturer": "Spotify AB",
+      "display_name": "Spotify",
+      "folder": "Spotify AB - Spotify",
+      "package_prefix": "Spotify",
+      "category": "Music",
+      "archive_after_days": 60,
+      "archive_action": "move",
+      "delete_after_days": 365,
+      "notes": "Version numbers in filename are ignored for folder matching"
+    },
+    {
+      "id": 2,
+      "manufacturer": "Google LLC",
+      "display_name": "Google Play services",
+      "folder": "Google LLC - Google Play services",
+      "package_prefix": "Google Play services",
+      "category": "System",
+      "archive_after_days": 60,
+      "archive_action": "move",
+      "delete_after_days": 365,
+      "notes": "Place specific Google entries before generic Google entry"
+    },
+    {
+      "id": 3,
+      "manufacturer": "Google LLC",
+      "display_name": "Google",
+      "folder": "Google LLC - Google",
+      "package_prefix": "Google",
+      "category": "Tools",
+      "archive_after_days": 60,
+      "archive_action": "move",
+      "delete_after_days": 365,
+      "notes": "Generic Google catch-all — must remain last Google entry"
+    }
+  ]
+}
